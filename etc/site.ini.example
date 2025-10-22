@@ -1,0 +1,21 @@
+[sys]
+; enable debugging messages from localhost
+is_devel=1
+
+[general]
+; list all the providers here
+tests=oauth_myprovider
+
+; example provider entry called 'my provider'
+[oauth_myprovider]
+clientid=xyzzy
+clientsecret=xyzzy
+openidconfigurl=https://auth.mydomain.com/application/o/local-test/.well-known/openid-configuration
+openidissueurl=https://auth.mydomain.com/application/o/local-test/
+authorizeurl=https://auth.mydomain.com/application/o/authorize/
+tokenurl=https://auth.mydomain.com/application/o/token/
+userinfourl=https://auth.mydomain.com/application/o/userinfo/
+logouturl=https://auth.mydomain.com/application/o/local-test/end-session/
+jwksurl=https://auth.mydomain.com/application/o/local-test/jwks/
+
+; and add new oauth_providers in the same format as [oauth_myprovider] below
